@@ -4,7 +4,7 @@ import java.util.Collections;
 class MedianSortedArrays{
   // Problem Question: https://leetcode.com/problems/median-of-two-sorted-arrays/
   // Problem Constraint mentioned in question is: O(log(m+n)) where m is nums1.length and n is nums2.length
-  // My solution below takes O(n log m + m) but it is submitted successfully
+  // My solution below takes O((n log(m+n)) + m) but it is submitted successfully
   // ? Some improvements can be made
   public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
     ArrayList<Integer> finalArr = new ArrayList<>();
