@@ -1,4 +1,4 @@
-class JumpGame {
+class JumpGameII {
     // Problem question: https://leetcode.com/problems/jump-game-ii/
     public int jump(int[] nums) {
         int len = nums.length;
