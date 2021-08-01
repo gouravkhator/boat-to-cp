@@ -1,45 +1,50 @@
-import java.util.ArrayList;
-import java.util.Collections;
-
 class MedianSortedArrays{
   // Problem Question: https://leetcode.com/problems/median-of-two-sorted-arrays/
-  // Problem Constraint mentioned in question is: O(log(m+n)) where m is nums1.length and n is nums2.length
-  // My solution below takes O((n log(m+n)) + m) but it is submitted successfully
-  // ? Some improvements can be made
   public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
-    ArrayList<Integer> finalArr = new ArrayList<>();
-
     /*
     Logic:
-    First add all elements of nums1 in arraylist, then binary search for elements of nums2 in nums1 one by one
+    Take two pointers i and j on two arrays nums1 and nums2 respectively.
+    Now, only add the smaller of the two element pointed by i and j. 
+    If we got smaller element in nums1, then increment i else if we got smaller in nums2, increment j.
 
-    If the search is found, just insert that element of nums2 at that index in arraylist.
-    If search is not found, then that negative index returned, tells us where that element can be inserted.
+    Now, loop through left over elements of nums1 and nums2 and add them in finalArr.
+    We get the merged sorted array.
 
-    Insert that element at that index in arraylist.
+    Now, the median is middlemost element or average of two middle most elements.
+
+    Using ArrayList could increase time for adding and getting. Doing (m+n) multiple times may increase time.
+    Use k instead which is already (m+n) after all manipulations and finalArr creation.
     */
-    for(int x: nums1){
-      finalArr.add(x);
-    }
 
-    for (int elem: nums2) {
-      int index = Collections.binarySearch(finalArr, elem);
-      if(index < 0){
-        // if index is negative, then index is -(insertionIndex) - 1
-        index = -index - 1; // final insertion index to insert is -index-1
+    int i=0,j=0, m = nums1.length, n = nums2.length, k=0;
+    int[] finalArr = new int[m+n];
+
+    while(i < m && j < n){
+      if(nums1[i] < nums2[j]){
+        finalArr[k++] = nums1[i++];
+      }else{
+        finalArr[k++] = nums2[j++];
       }
-      finalArr.add(index, elem);
     }
 
-    int totalLen = finalArr.size();
-    if(totalLen%2 == 0){
+    while(i < m){
+      // left overs of nums1 to add in finalArr
+      finalArr[k++] = nums1[i++];
+    }
+
+    while(j < n){
+      // left overs of nums2 to add in finalArr
+      finalArr[k++] = nums2[j++];
+    }
+
+    if(k%2 == 0){
       // even number of elements
       // converting either one of division operands to double as it was int before
       // Division of int and int will always result in int, and we want floating values.
-      return ((double)finalArr.get(totalLen/2)+finalArr.get(totalLen/2 - 1))/2;
+      return ((double)finalArr[k/2]+finalArr[k/2 - 1])/2;
     }
 
-    return finalArr.get(totalLen/2); // if number of elements is odd
+    return finalArr[k/2]; // if number of elements is odd
   }
 
   public static void main(String[] args) {
