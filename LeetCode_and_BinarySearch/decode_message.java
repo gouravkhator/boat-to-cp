@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 class DecodeMessage {
   // Problem Question: https://binarysearch.com/problems/Decode-Message
   public static int solve(String message) {
@@ -6,10 +8,10 @@ class DecodeMessage {
       return 0; // if length is 0 then 0 is the answer
     }
 
-    return helper(message);
+    return helper(message, new HashMap<>());
   }
 
-  public static int helper(String message) {
+  public static int helper(String message, HashMap<String, Integer> map) {
     /*
     Logic:
 
@@ -31,6 +33,8 @@ class DecodeMessage {
 
     When I have 1 character in this iteration, I will check and return from there,
     and never recur again for rest which is "", empty).
+
+    For optimising and not calculating again, we memoize the results and keep it in hashmap.
     */
     int len = message.length();
     if(len == 0){
@@ -54,11 +58,28 @@ class DecodeMessage {
     }
 
     int resSingleChar = 0, resDoubleChar = 0;
-    if(singleCharProb != 0)
-      resSingleChar = helper(message.substring(1));
 
-    if(doubleCharProb != 0)
-      resDoubleChar = helper(message.substring(2));
+    if(singleCharProb != 0){
+      String temp = message.substring(1);
+      if(temp.length() > 0 && map.containsKey(temp)){
+        resSingleChar = map.get(temp);
+      }
+      else{
+        resSingleChar = helper(temp, map);
+        map.put(temp, resSingleChar);
+      }
+    }
+
+    if(doubleCharProb != 0){
+      String temp = message.substring(2);
+      if(temp.length() > 0 && map.containsKey(temp)){
+        resDoubleChar = map.get(temp);
+      }
+      else{
+        resDoubleChar = helper(temp, map);
+        map.put(temp, resDoubleChar);
+      }
+    }
     
     return resSingleChar + resDoubleChar;
   }
