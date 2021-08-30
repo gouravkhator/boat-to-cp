@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class FindLocalPeaksSequel {
     public boolean checkSmallNearNum(int index, int[] nums, int len){
         // This method checks if there are small numbers nearby or not.
         /*
