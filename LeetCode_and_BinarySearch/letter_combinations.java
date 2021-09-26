@@ -1,4 +1,6 @@
-class Solution {
+import java.util.*;
+
+class LetterCombinations {
     public void recur(String digits, HashMap<Character, String> map, int index, String prevStr, ArrayList<String> res){
         if(index >= digits.length()){
             res.add(prevStr);
