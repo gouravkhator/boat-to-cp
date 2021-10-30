@@ -1,6 +1,6 @@
 # Boat To CP
 
-The Competitive Programming questions link with solved Java solutions are written in this one single repository.
+The Competitive Programming questions link with solved Java/Python solutions are written in this one single repository.
 
 ## Platforms Covered
 
@@ -16,6 +16,6 @@ The Competitive Programming questions link with solved Java solutions are writte
 
 Not all CP questions are uploaded here. I got some of the major platforms here, on which I code and keep a local copy of my solutions. 
 
-**Note: All the solutions are written in Java, my primary language of choice for CP or basic stuffs.**
+**Note: All the solutions are written in Java/Python.**
 
 Some solutions were solved for some exams which I couldn't share.

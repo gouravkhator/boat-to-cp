@@ -1,4 +1,4 @@
-class Solution:
+class PowXN:
     # Problem Question: https://leetcode.com/problems/powx-n/
     def myPow(self, x: float, n: int) -> float:
         '''
