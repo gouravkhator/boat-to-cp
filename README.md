@@ -10,7 +10,8 @@ The Competitive Programming questions link with solved Java/Python solutions are
 * [GeeksForGeeks](https://www.geeksforgeeks.org/)
 * [Codeforces](https://codeforces.com/problemset/)
 * [HackerRank](https://www.hackerrank.com/)
-* OtherContest - It has questions given in comments of the code itself, and in filename too.
+* OtherContest - It has questions given in comments of the code itself, and in filename too. 
+It also includes **Google Kickstart** problem sums, either solved fully by me, or inspired by others' approaches..
 
 ## Assumptions
 
