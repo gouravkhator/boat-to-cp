@@ -7,10 +7,10 @@ class CountSublistSameFirstLast {
         Logic:
         My Pattern says: 
         Ex- [1,2,3,2,5,1,2]
-        Count of sublists with more than one values having start and end as 2: 3C2
-        Here, 3 is count of occurrences of element 2
-        Count of sublists with more than one values having start and end as 1: 2C2
-        Here, 2 is count of occurrences of element 1
+        Count of sublists (with more than one occurrences) having start and end as 2: 3C2
+        Here, the count of occurrences of element 2 is 3
+        Count of sublists (with more than one occurrences) having start and end as 1: 2C2
+        Here, the count of occurrences of element 1 is 2
         
         NC2 = N*(N-1)/2
         So, count the element's occurrences when they occur more than once in the array.

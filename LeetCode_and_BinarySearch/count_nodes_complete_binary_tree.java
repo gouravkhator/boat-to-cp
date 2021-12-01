@@ -1,10 +1,3 @@
-/**
- * public class Tree {
- *   int val;
- *   Tree left;
- *   Tree right;
- * }
- */
 class CountNodesCBT {
     public class Tree {
         int val;

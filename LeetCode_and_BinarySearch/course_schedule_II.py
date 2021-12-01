@@ -68,8 +68,13 @@ class CourseScheduleII:
 
         Why we have done topological sort, and not normal recursion?
         > It's bcoz for getting ordering of the nodes in the graph of prerequisites, topological sort uses saving and getting approach.
-        Normal recursion might have traversed each node multiple times, and not saved the status of that node.
+        Normal recursion might have traversed each node multiple times, and not saved the state of that node.
         Topological sort saves the state, and does not re-process for each node more than once.
+
+        Topological sort means to have dependent ones in the bottom of stack, and the non-dependent ones in the top of stack.
+        So, for this, the prerequisites are pushed to stack, after the dependent ones are pushed to stack.
+        So, we recur from prerequisite courses to their next courses. And if the next courses are already in stack, we just push this prerequisite course too.
+        Else, we again take that next course to be prerequisite course for further courses.
         '''
         
         adjList = {course: [] for course in range(numCourses)} # initializing adjacency list
@@ -101,7 +106,7 @@ class CourseScheduleII:
             stack.append(course)
         
         # doing topological sort, to get the order of courses
-        # do topological sort from each course, as we need to cover every node, and no node sould be undiscovered..
+        # do topological sort from each course, as we need to cover every node, and no node should be undiscovered..
         for i in range(numCourses):
             topologicalSort(i)
         

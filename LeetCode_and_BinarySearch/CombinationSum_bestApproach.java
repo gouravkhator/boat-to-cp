@@ -39,9 +39,10 @@ class CombinationSum {
         }
         
 		for(int i=startIndex; i<nums.length; i++){
+            // visit a number and recur for next occurrences of the same number
             list.add(nums[i]);
             recur(remainingSum - nums[i], nums, i, list, result);
-            list.remove(list.size() - 1);
+            list.remove(list.size() - 1); // we exclude this number and try for next number
         }
 	}
 }
