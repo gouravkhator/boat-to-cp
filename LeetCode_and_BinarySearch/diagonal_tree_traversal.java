@@ -13,20 +13,18 @@ class DiagonalTreeTraversal {
         /*
         Logic:
 
-        If root's left is present, save it to nextLL (linkedlist for next diagonal elements).
-        If root's right is present, just add root's val to currentSum and goto root's right.
+        Core logic is to save left child of the nodes present in current diagonal.
+        And if right child is present, we save left child to next diagonal list and then traverse to the right child.
+        
+        If right child is not present, we check the current diagonal list and if it is also empty, we push the sum to result.
+        And make the next diagonal list as our current one.
+        
+        If right child is absent, there can be a case where current diagonal list contains some other elements.
+        It is bcoz, those elements might be left child of some other parent.
 
-        If root's right is absent, just check if currentLL contains something.
-        (as in same diagonal may have more elements but they are not in the direct right of current node).
-        If that's the case, set root to the first node of currentLL and remove that node from currentLL.
-
-        If root's right is absent and currentLL has nothing, it means this diagonal is fully traversed.
-
-        So, add current node's value to currentSum, then add currentSum to sums array, then reset currentSum to 0.
-        Now, set currentLL to point to nextLL. And reset nextLL.
-        This means currentLL should contain elements to be traversed for current diagonal,
-        and nextLL should contain left childrens of current diagonal.
+        So, until and unless current diagonal list is not empty, we sum each element and act as said above.
         */
+        
         if(root == null) return null;
 
         int currentSum = 0;

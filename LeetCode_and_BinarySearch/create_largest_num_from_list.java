@@ -14,25 +14,28 @@ class CreateLargestNumFromList {
         /*
         Main logic lies in sorting the strings. The sort is not regular reverse sort. It's more tricky.
 
-        In compare, String a is always the one that's present after String b in numsStr array.
-        If a starts with b or b starts with a, that means we need to check what will be the order to merge them
+        There can be numbers like 1 and 10 where if we do a normal sort it will treat 10 as bigger one than 1.
+        And it will keep it as 10, 1 which merges to 101 which is not the largest number formed.
+        It should be 110.
 
-        s1 contains first a then b. s2 contains first b then a.
+        For this, we check if either b starts with a or a starts with b, then we merge them both ways.
+        One string s1 will have a first, followed by b. s2 will have b first, followed by a.
 
-        If s1 int value is greater than s2 int value, that means:
+        In the array, a has occurred before b.
+        So, if s1 (in int form) > s2 (in int form), it means by keeping a before b, we get larger number.
+        So, we don't do swap. So return negative number.
 
-        a should be placed before b. And as a is always placed after b, we would swap them.
-        (swapping means returning negative number, so return -1)
+        If s1 < s2 (both are in int form), then it means by keeping b before a, we get larger number.
+        So, we swap a and b. So return positive number.
+        
+        If neither b starts with a nor a starts with b, then it means:
+        Ex- 72 and 59 here, we can just compare the strings and swap accordingly..
 
-        If s2 int value is greater than or equal to s1 int value, that means:
-        b should be placed before a. And as b is already placed before a, we don't swap them.
-        (no swap means returning positive number, so return 1).
-
-        If neither b starts with a nor a starts with b,
-        Then, if b > a lexicographically, then return +ve number (means no swap).
-        If a > b lexicographically, then return -ve number (means swap).
-
-        This return is controlled by compareTo method.
+        If a is larger than b, and as a always comes before b in array, so we don't swap.
+        If b is larger than a, we swap.
+        To achieve this check easily, use compareTo. 
+        b.compareTo(a) returns positive number when b is larger than a, so the sort method will swap them.
+        Else will not swap.
         */
 
         Arrays.sort(numsStr, new Comparator<String>(){

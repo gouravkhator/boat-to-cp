@@ -15,27 +15,15 @@ class DecodeMessage {
     /*
     Logic:
 
-    Ex- "123106"
-    Take 1st character and if its valid (in range of 1 to 9), then single character probability is 1 else 0.
-    Take 1st 2 characters and if its valid (in range of 10 to 26), then double character probability is 1 else 0.
+    Core logic is to check 1 character and if it is valid (in range of 1 to 9), we recur for rest.
+    Then check 2 characters at a time and if it is valid (in range of 10 to 26), we recur for rest.
 
-    If single character probability is 1, then we can recur for rest characters that is "23106".
-    If double character probability is 1, then we can recur for rest characters that is "3106".
-    Add both results up.
-
-    Edge cases:
-    If length is less than 2, and I cannot take 1st two characters, then return the single character probability (0 or 1).
-    If length is 0, then return 1 (1 case as explained just below)
-    (length can only become 0 when we take two characters at a time and recur for rest which is "", empty).
-    
-    (when I have atleast 2 characters in current recursive iteration, I can take single character in that iteration, 
-    and recur for rest which is obviously 1 character long, in the next iteration.
-
-    When I have 1 character in this iteration, I will check and return from there,
-    and never recur again for rest which is "", empty).
+    At last when we are left with 0 characters, it is sure that all were valid. So return 1 from there.
+    In recursion, we add the results we got from single char recursion and double char recursion.
 
     For optimising and not calculating again, we memoize the results and keep it in hashmap.
     */
+    
     int len = message.length();
     if(len == 0){
       return 1; // if length is 0, its due to the fact that previous string was 2 characters long and valid.
