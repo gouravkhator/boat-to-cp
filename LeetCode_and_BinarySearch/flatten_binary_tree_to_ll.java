@@ -20,7 +20,36 @@ class FlattenBinaryTree {
     take the right node back and process it and then attach right's head to the left node chain's tail node.
 
     Don't forget to remove left subtree after we have copied them in right.
+
+    Core logic can be explained through an example :
+        1
+      /   \
+    2      5
+  /  \      \
+ 3    4      6
+    
+    For above tree, we first get 1, and then while going to 2, we send 5 as the savedRight node.
+    Also, while going to node 2, we attach node 2 to right of node 1, and we reset node 1's left.
+    This is always done when going to left child.
+
+    So, in recursive function, root is node 2 and savedRight is node 5.
+    Again, we go to node 3 and send 4 as savedRight.
+    And node 3 has been attached to node 2's right and node 2's left has been reset.
+
+    Now, at node 3, we see no child. So, we attach savedRight to 3's right and recurse for node 4.
+    Then, when that recursion is done, we again backtrack to node 2 with savedRight as node 5.
+
+    Now, for attaching savedRight, that is, node 5 we must travel to node 2's rightmost element.
+    (As already the left children have been null, and we have attached the nodes to right)
+
+    So, node 4 is right of node 3, which is right of node 2, which is right of node 1.
+    We will attach node 5 to right of node 4.
+    Now, recurse for node 5 with savedRight as null.
+    Now, as node 5 does not have left, we goto its right and recurse there with savedRight as null.
+
+    And hence, the binary tree is flattened.
     */
+
     if(root == null) return;
 
     // if left child is there

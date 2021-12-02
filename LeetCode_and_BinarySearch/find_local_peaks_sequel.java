@@ -16,8 +16,16 @@ class FindLocalPeaksSequel {
         but left side has 1 number which is less than current number after duplicates.
 
         Or, check both sides have 1 number on each side after duplicates of current value.
-        In all above cases, return true else false. 
+        In all above cases, return true else false.
+
+        Optimisation can be done by not repeating similar checks in solve method,
+        But not sure why but that optimisation fails for an array like:
+        [1,1,1,1,1,1,1,.....1]
+
+        The largest length with all duplicate values, then it was having TLE.
+        So, keeping below approach for now.
         */
+
         int i=0;
         if(index == 0){
             for(i=index+1; i<len && nums[i] == nums[index]; i++);
