@@ -10,8 +10,16 @@ class KNumGreaterEqualsK {
         For making arrays, calculate max number to have a maximum length of the arrays.
         Calculate freq for each element and store in freq array.
 
-        Now, dp[i] means how much elements are greater than or equals i and also present in nums.
+        Now, dp[i] means how much elements are greater than or equal to i and also present in nums.
         (this will be dp[i-1] - freq[i-1] and this formula was generalized by looking at various patterns)
+
+        This logic is based on the fact that:
+        For numbers greater than or equal to 0, all elements count.
+        For numbers greater than or equal to 1, all elements count except the number of 0's.
+        For numbers greater than or equal to 2, all elements count except the number of 0's and 1's.
+        And so on.
+        So, if dp[1] is found and we need dp[2], it will be all elements counted for greater than or equal to 1,
+        but then remove the counts of 1's from the count and we get dp[2].
 
         dp[0] will be number of elements in nums array.
         (as all elements are either greater than 0 or equals 0)

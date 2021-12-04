@@ -24,19 +24,22 @@ class LargestNumRotatedList:
 
             if arr[mid] > maximum:
                 # if mid child is maximum, left side will be mid and right side will be right - 1
+                # ex- [3,4,5,1] here 4 was the arr[mid] and it was greater than 3 and 1 but 5 resides in the right side, larger than 4
+                # if mid is maximum, left side would never contain larger number
                 maximum = arr[mid]
                 resLeft = mid
                 resRight = right - 1
             
             if arr[left] > maximum:
                 # if left child is maximum, left side will be left and right side will be mid - 1
+                # as we can have greater number between left and mid
                 maximum = arr[left]
                 resLeft = left
                 resRight = mid - 1
             
             if arr[right] > maximum:
                 # if right child is maximum, we don't recur for more, as there is nothing maximum than right
-                # as amongst left child right child and mid child, right child is maximum 
+                # as amongst left child, right child and mid child, right child is maximum 
                 maximum = arr[right]
                 return
             

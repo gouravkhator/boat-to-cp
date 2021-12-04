@@ -7,7 +7,7 @@ class MaximalSquare{
     then as matrix can only store character it will be difficult for me to store '11' in a single char.
 
     Also, storing 11 as just a int in the char matrix will work for given contraints,
-    but leetcode told that the solution without using another matrix used more memory than using dp.
+    but leetcode told that the solution (without using another matrix) used more memory than the solution using dp.
 
     Don't know why, as same manipulations were done there as well. So, using dp, a new matrix.
 

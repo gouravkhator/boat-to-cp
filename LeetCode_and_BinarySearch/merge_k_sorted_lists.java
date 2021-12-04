@@ -44,6 +44,17 @@ class MergeKSortedLists {
   
   // Problem Question: https://leetcode.com/problems/merge-k-sorted-lists/
   public static ListNode mergeKLists(ListNode[] lists) {
+    /*
+    Logic:
+
+    Approach 1 (coded below):
+    First merge all sorted list into 1 list and then insertion sort the resultant list.
+
+    Approach 2 (not coded here):
+    Find min in all list and append that to resultant list.
+    Also increment that head of that list only, from which the minimum element was found.
+    */
+    
     int k = lists.length, i=0;
     ListNode resHead = null, resTail = null, tempHead = null;
     // resHead means the head of final merged list
@@ -52,8 +63,8 @@ class MergeKSortedLists {
 
     for(i=0; i<k; i++){
       if(resTail != null){
-        resTail.next = lists[i]; // link resTail with current head if resTail was set
-        // if current head is null, then also resTail.next will be null which is required.
+        resTail.next = lists[i]; // link resTail with current head
+        // if current head is null, then also resTail.next will be null (it is important part).
       }
       
       if(lists[i] == null){
@@ -76,7 +87,7 @@ class MergeKSortedLists {
       resTail = tempHead; // set resTail to last element of the current list
     }
     
-    resHead = insertionSort(resHead);
+    resHead = insertionSort(resHead); // insertion sort the resultant merged list
     return resHead;
   }
 

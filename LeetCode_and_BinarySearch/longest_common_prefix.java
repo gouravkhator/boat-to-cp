@@ -12,6 +12,7 @@ class LongestCommonPrefix {
         */
 
         int minLen = 210, len = strs.length;
+        // as maximum length of any string in the given list is told to be 200, so we took minLen as 210
         
         for(int i=0; i<len; i++){
             minLen = minLen > strs[i].length() ? strs[i].length() : minLen;
