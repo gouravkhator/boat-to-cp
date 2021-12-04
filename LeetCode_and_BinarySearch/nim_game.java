@@ -3,15 +3,15 @@ class NimGame {
     public boolean canWinNim(int n) {
         /*
         Logic:
-        I first approached with a dp solution:
-        dp[1] = dp[2] = dp[3] = true (means I will win)
 
-        Loop from i = 4 to n
-            dp[i] = !dp[i-1] || !dp[i-2] || !dp[i-3];
+        Main question said this: 
+        Let's say n=5:
+        then I would take 1 stone, the other guy can take at max 3 stones, and the remainining stones will be taken by me.
+        So, I always win.
 
-        Return dp[n] it means check previous and compute accordingly, but this solution led to TLE.
-        While printing dp, I found that if n is divisible by 4, its false, else true.
+        I found a pattern that if n is divisible by 4, it's false, else true.
         */
+
         return (n%4) != 0;
     }
 }

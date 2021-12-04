@@ -17,6 +17,13 @@ class UniquePaths{
     for(i=1;i<=m;i++){
       for(j=1;j<=n;j++){
         if(i==1 || j==1){
+          /*
+          in 1st column or 1st row, only 1 path is possible.
+          it is bcoz, for 1st column for ex- to reach (3,1),
+          we cannot go from (1,1) towards the right, then downwards and then leftwards, as left direction is not allowed.
+          Similarly for 1st row, as up direction is not allowed, so we can have only 1 path.
+          */
+          
           dp[i][j] = 1;
         }else{
           dp[i][j] = dp[i][j-1] + dp[i-1][j];

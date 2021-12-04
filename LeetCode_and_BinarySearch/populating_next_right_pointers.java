@@ -47,6 +47,8 @@ class PopulatingNextRightPointers {
         leftChild.next = rightChild;
         if(root.next != null && root.right != null && root.next.left != null){
             root.right.next = root.next.left;
+            // this linking works only in perfect/full binary tree
+            // or else, we may have to link root's right child to root's next right child if root's next has no left child. 
         }
         
         recur(leftChild);

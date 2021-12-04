@@ -16,13 +16,14 @@ class MovingStonesTillConsecutive {
     Similarly for diffOne >= 2 and diffTwo = 2, then move stone at x to position between y and z.
 
     If diffOne != 1, and not of above conditions, min moves increments by 1.
-    (as it means, move stone at x to position between x and y if possible)
+    (it means if x is not y-1 then, we can move stone at x to position y-1 in 1 jump)
 
     If diffTwo != 1, min moves increments by 1.
-    (as it means, move stone at z to position between y and z if possible)
+    (it means if z is not y+1 then, we can move stone at z to position y+1 in 1 jump)
 
     This way, if both differences are > 2, then min moves becomes 2 (incremented twice as told above).
     */
+    
     int[] answer = new int[2];
     
     int x = Math.min(Math.min(a,b),c);

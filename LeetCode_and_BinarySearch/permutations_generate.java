@@ -45,6 +45,20 @@ class PermutationsGenerator {
                 nums[indexToSwap] = temp;
                 
                 // reverse the remaining array, to get them in ascending order.
+                /*
+                 if after swapping from [1,3,2] we got [2,3,1].
+
+                 Now, why reverse helps and sorting is not necessary?
+                 > It's bcoz we got a breakpoint at 1 and this means 1 was smaller than all elements after it.
+                 And after 1, all were in descending order.
+
+                 So, if we swap 2 with 1, then also 1 is smaller than 3 and as [3,2] was already in descending order,
+                 So, after swapping also, [3,1] will be in descending order.
+                 
+                 So, reversing them will make it ascending order.
+                 We get [2,1,3] at last as the next permutation.
+                */
+
                 reverse(nums, i+1, len - 1);
                 return true;
             }
