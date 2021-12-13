@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
-class Solution {
+class PerfectSquares {
   public int minSquares(int n, HashMap<Integer, Integer> map, ArrayList<Integer> squares, int squaresCount) {
     /*
     Logic:
