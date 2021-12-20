@@ -2,7 +2,13 @@
 
 The Competitive Programming questions link with solved Java/Python solutions are written in this one single repository.
 
-## Platforms Covered
+**\*NEW\* stuffs in this repo:**
+
+**Systems Design** - It includes problem statement, approach, hyperlinks, and much more.
+
+The whole Systems Design will be in **.md** file with proper formatting and so much fun.
+
+## CP Platforms Covered
 
 * [Leetcode](https://leetcode.com/problemset/all/)
 * [Binary Search](https://binarysearch.com/)
