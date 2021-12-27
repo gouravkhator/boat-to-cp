@@ -4,9 +4,11 @@ The Competitive Programming questions link with solved Java/Python solutions are
 
 **\*NEW\* stuffs in this repo:**
 
-**Systems Design** - It includes problem statement, approach, hyperlinks, and much more.
+* **Systems Design** - It includes problem statement, approach, hyperlinks, and much more. 
 
-The whole Systems Design will be in **.md** file with proper formatting and so much fun.
+    The whole Systems Design will be in **.md** file with proper formatting and so much fun.
+
+* Approached CP Problems but not yet solved - It includes approach and code in the form of **.md** files for each question.
 
 ## CP Platforms Covered
 
