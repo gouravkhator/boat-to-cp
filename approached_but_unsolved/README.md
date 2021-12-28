@@ -7,7 +7,8 @@
 * [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
 * [Recover BST](https://leetcode.com/problems/recover-binary-search-tree/)
 * [Guess Number Higher or Lower II](https://leetcode.com/problems/guess-number-higher-or-lower-ii/)
-* [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+* [Filling BookCase Shelves](https://leetcode.com/problems/filling-bookcase-shelves/)
+* [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 
 ## BinarySearch
 
