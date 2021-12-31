@@ -12,7 +12,6 @@
 
 ## BinarySearch
 
-* [Latin Square Solver](https://binarysearch.com/problems/Latin-Square-Solver)
 * [Hill Maker](https://binarysearch.com/problems/Hill-Maker)
 * [Cut Palindrome](https://binarysearch.com/problems/Cut-Palindrome)
 * [Swapping Socks](https://binarysearch.com/problems/Swapping-Socks)
