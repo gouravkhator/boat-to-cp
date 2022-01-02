@@ -119,7 +119,7 @@ class LatinSquareSolver:
 
         return self.recur(unfilled_squares, 0, matrix)
 
-ob = Solution()
+ob = LatinSquareSolver()
 print(ob.solve([[1,3,2], [3,0,1], [2,3,0]]))
 print(ob.solve([[3,0,1], [1,2,3], [3,1,3]]))
 print(ob.solve([[1,2,3], [2,0,1], [3,1,2]]))

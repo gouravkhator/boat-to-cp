@@ -1,69 +1,108 @@
 # [Angry Owner](https://binarysearch.com/problems/Angry-Owner)
 
-## Code
+## Code | WA solution
 
-```java
-class AngryOwner {
-    // Problem Question: https://binarysearch.com/problems/Angry-Owner
-    public static int solve(int[] customers, int[] mood, int k) {
-        // check a sublist by 2-pointer approach of length k which has sum maximum and maximum number of 0's in mood
-        int i=0, start = 0, end = k - 1, finalStart = -1, finalEnd = -1, len = customers.length, 
-          maxSum = 0, currentSum = 0, zerosCount = 0, maxZeros = 0, finalSum = 0;
+```py
+class Solution:
+    ''' 
 
-        for(i=start; i<=end && i<len; i++){
-          currentSum += customers[i];
-          
-          if(mood[i] == 0)
-              zerosCount += 1;
-        }
+    customers = [1, 2, 5, 5, 2]
+    mood = [0, 0, 1, 0, 1]
+    k = 3
+    Expected: 14
 
-        while(true){
-            if(maxSum <= currentSum && maxZeros <= zerosCount){
-                finalStart = start;
-                finalEnd = end;
-                maxSum = currentSum;
-                maxZeros = zerosCount;
-            }
+    customers = [1, 2, 5, 5, 2]
+    mood = [0, 0, 0, 0, 1]
+    k = 3
+    Expected: 14
 
-            start++;
-            if(start >= len){
-              break;
-            }
+    customers = [2,1]
+    mood = [1,0]
+    k = 1
+    Expected: 3
 
-            if(mood[start - 1] == 0){
-              zerosCount--;
-            }
+    customers = [1, 1, 0, 0]
+    mood = [0, 1,0,0]
+    k = 2
+    Expected: 2
 
-            end++;
-            if(end >= len){
-              break;
-            }
+    Problem question: https://binarysearch.com/problems/Angry-Owner
+    '''
+    def solve(self, customers, mood, k):
+        # whenever the mood is 0, we just calc max sum and update that, and reset the current sum
 
-            if(mood[end] == 0){
-              zerosCount++;
-            }
+        # if number of numbers taken now is exceeding k, then update max sum and update the pointer of the start of the list and update the previous sum to include new one and exclude the previous pointer's sum
 
-            currentSum += customers[end] - customers[start - 1];
-        }
+        n = len(mood)
 
-        for(i=finalStart; i<=finalEnd; i++){
-          mood[i] = 1;
-        }
+        if n == 0:
+            return 0
+    
+        global_left, global_right, left_pointer, global_zeros = -1, -1, 0, 0
+        current_sum, maximum, current_zeros_count = 0, 0, 0
 
-        for(i=0; i<len; i++){
-          if(mood[i] == 1)
-              finalSum += customers[i];
-        }
+        for i in range(0, n):
+            if (i - left_pointer + 1) <= k:
+                current_sum += customers[i]
 
-        return finalSum;
-    }
+                if mood[i] == 0:
+                    current_zeros_count += 1
+            else:
+                # update maximum, global_left, global_right, and current_sum
+                if current_zeros_count > global_zeros and current_sum > 0:
+                    maximum = current_sum
+                    global_left = left_pointer
+                    global_right = i - 1
+                    global_zeros = current_zeros_count
+                    print(maximum)
+                elif current_zeros_count == global_zeros and current_sum > maximum:
+                    maximum = current_sum
+                    global_left = left_pointer
+                    global_right = i - 1
+                    global_zeros = current_zeros_count
+                    print(maximum)
+                elif current_zeros_count < global_zeros and current_sum >= maximum and current_zeros_count > 0:
+                    # if sum is greater, then that subset should have atleast zeros_count > 0
+                    maximum = current_sum
+                    global_left = left_pointer
+                    global_right = i - 1
+                    global_zeros = current_zeros_count
+                    print(maximum)
 
-    public static void main(String[] args) {
-      System.out.println(solve(new int[]{1,2,5,5,2,9,4,1,2}, new int[]{1,1,0,0,0,0,1,0,0}, 2));
-      System.out.println(solve(new int[]{5,9,2,3,11,7}, new int[]{0,1,0,0,1,0}, 3));
-      System.out.println(solve(new int[]{5,9,2,3,11,7,4}, new int[]{0,1,0,1,1,0,1}, 3));
+                current_sum -= customers[left_pointer]
+                current_zeros_count -= 1 if mood[left_pointer] == 0 else 0
+                current_zeros_count += 1 if mood[i] == 0 else 0
+                current_sum += customers[i]
+                left_pointer += 1
 
-      System.out.println(solve(new int[]{2,1}, new int[]{1,0}, 1)); // expected: 3, output: 2
-    }
-}
+        if current_zeros_count > global_zeros and current_sum > 0:
+            maximum = current_sum
+            global_left = left_pointer
+            global_right = n - 1
+            global_zeros = current_zeros_count
+            print(maximum)
+        elif current_zeros_count == global_zeros and current_sum > maximum:
+            maximum = current_sum
+            global_left = left_pointer
+            global_right = n - 1
+            global_zeros = current_zeros_count
+            print(maximum)
+        elif current_zeros_count < global_zeros and current_sum >= maximum and current_zeros_count > 0:
+            # if sum is greater, then that subset should have atleast zeros_count > 0
+            maximum = current_sum
+            global_left = left_pointer
+            global_right = n - 1
+            global_zeros = current_zeros_count
+            print(maximum)
+
+        for i in range(n):
+            if i >= global_left and i <= global_right:
+                continue
+            
+            if mood[i] == 1:
+                maximum += customers[i]
+
+        return maximum
+
+
 ```
