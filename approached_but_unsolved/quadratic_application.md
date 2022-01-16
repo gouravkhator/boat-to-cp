@@ -6,10 +6,8 @@
 class Solution:
     # WA for test case: 
     '''
-    nums = [-6, -2, 3, 5, 9]
-    a = 1
-    b = -3
-    c = 2
+    nums=[-3,0,3]
+    a=-3, b=0, c=0
     '''
     def solve(self, nums, a, b, c):
         left = 0
@@ -21,12 +19,12 @@ class Solution:
             leftres = a * (nums[left] ** 2) + b * nums[left]
             rightres = a * (nums[right] ** 2) + b * nums[right]
 
-            if leftres < rightres:
+            if leftres > rightres:
                 left += 1
                 res.append(leftres)
             else:
                 right -= 1
                 res.append(rightres)
 
-        return res
+        return res[::-1]
 ```
