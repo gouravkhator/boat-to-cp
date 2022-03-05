@@ -29,3 +29,6 @@
 
 * K maximum sum combinations from two arrays -- Given in GFG but try it yourself
 
+## Others
+
+* Convert Binary Tree to Doubly Linked List
