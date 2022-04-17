@@ -4,6 +4,9 @@ class FirstMissingPosSeq {
     /*
     Logic:
     If the arr has 1 thing not in [1,n+1] count will not increase.
+
+    Mainly, we start checking if current number is the current positive number,
+    then we check for next positive number during that array traversal..
     */
     int i=0, count=1;
     for(i=0; i<arr.length; i++){
