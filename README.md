@@ -13,6 +13,7 @@ The Competitive Programming questions link with solved Java/Python solutions are
 ## CP Platforms Covered
 
 * [Leetcode](https://leetcode.com/problemset/all/)
+    * [Blind 75 Problemset](https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions)
 * [Binary Search](https://binarysearch.com/)
 * [Project Euler](https://projecteuler.net/) - The filenames may be given as problemN where N is the problem number in project euler website.
 * [GeeksForGeeks](https://www.geeksforgeeks.org/)
