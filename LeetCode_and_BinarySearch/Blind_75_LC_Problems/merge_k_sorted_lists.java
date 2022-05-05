@@ -100,7 +100,7 @@ class MergeKSortedLists {
      * lists of ListNode.
      * k is the length of list of lists.
      * 
-     * log k is because we are dividing the list of lists into two halves, and so
+     * (log k) is because we are dividing the list of lists into two halves, and so
      * there are log k iterations.
      * For each iteration, we are mainly merging n*k elements, so we are traversing
      * those n*k elements once.
