@@ -24,7 +24,7 @@ It also includes **Google Kickstart** problem sums, either solved fully by me, o
 
 ## Assumptions
 
-Not all CP questions are uploaded here. I got some of the major platforms here, on which I code and keep a local copy of my solutions. 
+Not all CP questions are uploaded here. I got some of the major platforms here, on which I code and keep a local copy of my solutions.
 
 **Note: All the solutions are written in Java/Python.**
 
