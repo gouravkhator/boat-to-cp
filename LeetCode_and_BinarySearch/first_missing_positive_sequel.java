@@ -3,6 +3,8 @@ class FirstMissingPosSeq {
   public int solve(int[] arr) {
     /*
     Logic:
+    Note that the array wa already sorted.
+    
     If the arr has 1 thing not in [1,n+1] count will not increase.
 
     Mainly, we start checking if current number is the current positive number,
