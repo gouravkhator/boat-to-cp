@@ -17,7 +17,7 @@ class SearchRotatedSortedArr {
      */
 
     // the base case as well the edge case
-    if(low >= high){
+    if (low >= high) {
       /**
        * either single element in nums, for which low == high,
        * or either low > high, which means the array nums was fully in ascending order, or some other case,
@@ -47,14 +47,14 @@ class SearchRotatedSortedArr {
   }
 
   public int binarySearch(int[] nums, int low, int high, int target) {
-    if(low <= high){
-      int mid = low + (high - low)/2;
+    if (low <= high) {
+      int mid = low + (high - low) / 2;
 
-      if(nums[mid] == target){
+      if (nums[mid] == target) {
         return mid;
-      }else if(nums[mid] < target){
+      } else if (nums[mid] < target) {
         return binarySearch(nums, mid + 1, high, target);
-      }else{
+      } else {
         return binarySearch(nums, low, mid - 1, target);
       }
     }
@@ -85,10 +85,10 @@ class SearchRotatedSortedArr {
     int targetIndex = binarySearch(nums, 0, pivotPoint - 1, target);
 
     // if index found is < 0 from first part, then binary search in next part of array  
-    if(targetIndex < 0){
+    if (targetIndex < 0) {
       targetIndex = binarySearch(nums, pivotPoint, nums.length - 1, target);
 
-      if(targetIndex < 0){
+      if (targetIndex < 0) {
         return -1;
       }
     }
@@ -100,14 +100,14 @@ class SearchRotatedSortedArr {
     SearchRotatedSortedArr obj = new SearchRotatedSortedArr();
 
     // Sample Test cases
-    System.out.println(obj.search(new int[]{4,1,3}, 3));
-    System.out.println(obj.search(new int[]{1}, 1));
-    System.out.println(obj.search(new int[]{2,1}, 3));
-    System.out.println(obj.search(new int[]{2,1}, 1));
-    System.out.println(obj.search(new int[]{4,1,3}, 5));
-    System.out.println(obj.search(new int[]{4,5,6,7,0,1,2}, 3));
-    System.out.println(obj.search(new int[]{4,5,6,7,0,1,2}, 5));
-    System.out.println(obj.search(new int[]{1,3}, 3));
-    System.out.println(obj.search(new int[]{4,5,6,7,0,1,2}, 1));
+    System.out.println(obj.search(new int[] { 4, 1, 3 }, 3));
+    System.out.println(obj.search(new int[] { 1 }, 1));
+    System.out.println(obj.search(new int[] { 2, 1 }, 3));
+    System.out.println(obj.search(new int[] { 2, 1 }, 1));
+    System.out.println(obj.search(new int[] { 4, 1, 3 }, 5));
+    System.out.println(obj.search(new int[] { 4, 5, 6, 7, 0, 1, 2 }, 3));
+    System.out.println(obj.search(new int[] { 4, 5, 6, 7, 0, 1, 2 }, 5));
+    System.out.println(obj.search(new int[] { 1, 3 }, 3));
+    System.out.println(obj.search(new int[] { 4, 5, 6, 7, 0, 1, 2 }, 1));
   }
 }
