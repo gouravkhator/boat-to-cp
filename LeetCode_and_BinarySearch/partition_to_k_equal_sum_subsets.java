@@ -1,95 +1,58 @@
-import java.util.*;
+class PartitionToKEqualSumSubset {
 
-/**
- * !ISSUE: TLE in the input test case:
- * 
- * [10,1,10,9,6,1,9,5,9,10,7,8,5,2,10,8]
- * 11
- * 
- * Passed 155/159 test cases on Leetcode.. 
-*/
-class PartitionToKEqualSum {
-  public boolean partitionNumsRecur(int[] nums, int index, int[] subsetSums, int subsetSumRequired) {
-    int k = subsetSums.length;
-
-    if (index < 0) {
-      /*
-      if all the elements are processed,
-      then we check if all the subset sums being tracked, is equal to the sum we want in each subsets.
-      */
-      for (int i = 0; i < k; i++) {
-        if (subsetSums[i] != subsetSumRequired) {
-          return false;
-        }
-      }
-
+  public boolean canPartitionRecur(int[] nums, int k, boolean[] used, int iterationStart, int currSum, int subsetSum) {
+    if (k == 1) {
+      // only one subset is left to be filled, and that will be obvious that we can fill that last subset
       return true;
     }
 
-    // try putting nums[index] in any one of the k subsets
-    for (int i = 0; i < k; i++) {
+    if (currSum == subsetSum) {
       /**
-       * if the nums[index] is valid to be put in subset i,
-       * then we just include it to the subsetSums[i], and recur for index-1 indexed element
+       * if current sum for this kth subset is same as the subsetSum needed,
+       * then we know that the kth subset is filled fully, now, we recur for filling (k-1)th subset.
        * 
-       * Meaning the approach to solve this problem is the n-queens problem, where we place a queen in one of k spots, and then recur for next queens.
-       * 
-       * If (index-1)th index is well placed in a subset, then we return true from here as well.
-       * Else, we remove (index)th element from subset[i], and just try for other subsets.
-       */
-      if (subsetSums[i] + nums[index] <= subsetSumRequired) {
-        subsetSums[i] += nums[index];
+       * So, left over subsets is actually (k-1).. 
+      */
+      return canPartitionRecur(nums, k - 1, used, 0, 0, subsetSum);
+    }
 
-        if (partitionNumsRecur(nums, index - 1, subsetSums, subsetSumRequired) == true) {
+    // we loop from the iteration start to the rest of the numbers
+    for (int i = iterationStart; i < nums.length; i++) {
+
+      // we use this number if it is not used yet, and if including this would not exceed the subsetSum
+      if (used[i] == false && (nums[i] + currSum) <= subsetSum) {
+
+        used[i] = true; // choose this number
+
+        // we use this number, and then recur for the rest of the numbers
+        if (canPartitionRecur(nums, k, used, i + 1, currSum + nums[i], subsetSum)) {
           return true;
         }
 
-        subsetSums[i] -= nums[index];
+        used[i] = false; // we unchoose this number
       }
     }
 
-    return false; // if this could not be placed in any subset, we return false
+    return false;
   }
 
-  // Problem Question: https://leetcode.com/problems/partition-to-k-equal-sum-subsets
+  // Problem Question: https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
   public boolean canPartitionKSubsets(int[] nums, int k) {
-    /**
-     * Analogy:
-     * 
-     * This is mainly a full bin packing problem.
-     * There are k bins given and we need to put numbers in them, such that it does not exceed the bin's capacity.
-     * 
-     * Time complexity: O(n log n + k * 2^n) = O(k * 2^n)
-     * 
-     * Explanation of time complexity:
-     * 
-     * n log n is just needed to sort numbers and thus optimise the state space tree,
-     * so that it does not try useless paths..
-     * 
-     * k * 2^n is mainly by below:
-     * 
-     * 2^n for either including a number or excluding it.
-     * And for each number, we loop through all subsets.
-     */
-    int len = nums.length, totalSum = 0;
+    int totalSum = 0, len = nums.length;
 
     for (int i = 0; i < len; i++) {
       totalSum += nums[i];
     }
 
+    // 1 <= k <= 16, so no need to check for k=0
     if (totalSum % k == 1) {
-      // if total sum is not divisible by k, then we cannot divide the numbers, uniformly into k subsets
+      // if total sum is not divisible by k, then we cannot uniformly put the numbers in each subset
       return false;
     }
 
-    Arrays.sort(nums); // ascending order sorting
+    boolean[] used = new boolean[len];
+    int subsetSum = totalSum / k;
 
-    /**
-     * mainly we traverse the ascending sorted array in reverse order, to first place the greater numbers first..
-     * 
-     * If we don't sort it is not a problem, but is worse for the time complexity, as it will try to make a larger state space tree.
-     * So, sorting and then traversing in descending order helps.
-     */
-    return partitionNumsRecur(nums, len - 1, new int[k], totalSum / k);
+    return canPartitionRecur(nums, k, used, 0, 0, subsetSum);
   }
 }
