@@ -16,9 +16,10 @@ class PartitionToKEqualSumSubset {
       return canPartitionRecur(nums, k - 1, used, 0, 0, subsetSum);
     }
 
+    // below logic is just the modified version of combination sum 
+
     // we loop from the iteration start to the rest of the numbers
     for (int i = iterationStart; i < nums.length; i++) {
-
       // we use this number if it is not used yet, and if including this would not exceed the subsetSum
       if (used[i] == false && (nums[i] + currSum) <= subsetSum) {
 
@@ -38,6 +39,36 @@ class PartitionToKEqualSumSubset {
 
   // Problem Question: https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
   public boolean canPartitionKSubsets(int[] nums, int k) {
+    /**
+     * Analogy:
+     * 
+     * We can try one of the below approaches:
+     * 1. Either fill each subset at a time, and 
+     * for each subset, recur for every possible combination of the unused elements of the array.
+     * 2. Or, fill each number in the subsets, and check if other numbers can be filled successfully those k subsets.
+     * 
+     * This problem is mainly based on Full Bin packing problem.
+     * And the approach and code was taken from leetcode discuss, after many attempts of mine. 
+     * 
+     * Approach:
+     * 
+     * Here, I took the approach number 1, where I tried for kth subset to be filled with
+     * every possible combination of unused numbers.
+     * 
+     * And once the kth subset is filled, we then try for possible combinations of unused numbers to fill (k-1)th subset.
+     * 
+     * And if remaining k is 1, then we see that (k-1) subsets have been filled, so just return true for this last subset.
+     * It is bcoz, if all subsets are filled, then the last one can be filled with remaining numbers.
+     * 
+     * (It is also bcoz, the total sum is divisible by k,
+     * so we will be remaining with exact sbset sum and the exact unused numbers) 
+     * 
+     * Time complexity: O(k* 2^n)
+     * (As for k subsets, we do combination sum kind of logic trying to include or exclude an unused number)
+     * (So, 2^n as the worst case for combination sum logic, and this is done for each k)
+     * 
+     * Space complexity: O(n) extra space for boolean 'used' array
+     */
     int totalSum = 0, len = nums.length;
 
     for (int i = 0; i < len; i++) {
