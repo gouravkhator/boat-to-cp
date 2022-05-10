@@ -74,7 +74,7 @@ class LongestCommonSubsequence {
      * 
      * If the characters are same, then that is always counted in longest common subsequence, and we then check for remaining characters of both strings.
      * If the characters differ, then we either ignore one character from str1 or one from str2, and keep the other string intact and check what those return us.
-     * 
+     *  
      * --------------------------------------------------------------------
      * 
      * Time complexity: O(len(str1) * len(str2))
@@ -92,7 +92,7 @@ class LongestCommonSubsequence {
         if (i == 0 && j == 0) {
           // for cell [0,0]
           if (c1 == c2) {
-            LCS[0][0] = 1;
+            LCS[i][j] = 1;
           }
         } else if (i == 0 && j > 0) {
           // for first row

@@ -8,7 +8,6 @@
 * [Recover BST](https://leetcode.com/problems/recover-binary-search-tree/)
 * [Guess Number Higher or Lower II](https://leetcode.com/problems/guess-number-higher-or-lower-ii/)
 * [Filling BookCase Shelves](https://leetcode.com/problems/filling-bookcase-shelves/)
-* [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 * [Jump Game IV](https://leetcode.com/problems/jump-game-iv/)
 
 ## BinarySearch
