@@ -120,15 +120,18 @@ class TrappingRainwater {
     int left = 0, right = len - 1;
     int leftMax = height[left], rightMax = height[right];
 
-    while (left < right) {
+    while (left <= right) {
+      // updating the left and right maximums
+      leftMax = Math.max(leftMax, height[left]);
+      rightMax = Math.max(rightMax, height[right]);
+
+      // if one of the max is less, then that will be taken into consideration
       if (leftMax < rightMax) {
-        left++;
-        leftMax = Math.max(leftMax, height[left]);
         trappedWater += leftMax - height[left];
+        left++;
       } else {
-        right--;
-        rightMax = Math.max(rightMax, height[right]);
         trappedWater += rightMax - height[right];
+        right--;
       }
     }
 

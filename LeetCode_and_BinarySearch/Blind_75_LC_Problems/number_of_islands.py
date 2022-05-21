@@ -3,6 +3,10 @@ class NumberOfIslands:
     # This question is also there in leetcode: https://leetcode.com/problems/number-of-islands/
     def solve(self, matrix):
         '''
+
+        The approach should be much better, if we try it with the approach, same as:
+        "Number of provinces: https://leetcode.com/problems/number-of-provinces/"
+
         Logic:
 
         Number of Islands means number of groups having 1's, that are in some way horizontally or vertically connected directly or indirectly.

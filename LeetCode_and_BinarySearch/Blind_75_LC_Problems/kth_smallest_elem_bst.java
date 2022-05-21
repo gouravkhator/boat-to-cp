@@ -45,7 +45,10 @@ class KThSmallestInBST {
          * 
          * -----------------------------------------------------------------
          * 
-         * Time complexity: O(k) as it traverses k elements, each element only once.
+         * Time complexity: O(k + log(n)), as it traverses k elements, each element only once
+         * but it may travel the whole depth of the tree to find those k elements.
+         * 
+         * For example: For finding 1st smallest element, it has to travel to the leftmost of the BST.
          */
         if (root == null) {
             return -1;

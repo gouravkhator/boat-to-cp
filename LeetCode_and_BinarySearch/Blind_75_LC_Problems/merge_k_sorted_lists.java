@@ -43,10 +43,10 @@ class MergeKSortedLists {
 
     while (firstList != null && secondList != null) {
       if (firstList.val < secondList.val) {
-        nextValidNode = new ListNode(firstList.val);
+        nextValidNode = firstList;
         firstList = firstList.next;
       } else {
-        nextValidNode = new ListNode(secondList.val);
+        nextValidNode = secondList;
         secondList = secondList.next;
       }
 
@@ -60,7 +60,7 @@ class MergeKSortedLists {
     }
 
     while (firstList != null) {
-      nextValidNode = new ListNode(firstList.val);
+      nextValidNode = firstList;
 
       if (mergedListHead == null) {
         mergedListHead = nextValidNode;
@@ -74,7 +74,7 @@ class MergeKSortedLists {
     }
 
     while (secondList != null) {
-      nextValidNode = new ListNode(secondList.val);
+      nextValidNode = secondList;
 
       if (mergedListHead == null) {
         mergedListHead = nextValidNode;
