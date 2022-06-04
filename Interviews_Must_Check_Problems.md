@@ -30,3 +30,8 @@ I will also hyperlink the solutions in the below table itself, once I commit and
 | Subsets With Duplicates I/II | |
 | Spiral Matrix | |
 | Next permutation | |
+| Find Kth Bit in Nth Binary String | |
+| Permutations I & II | |
+| Range Sum Query 2-D Immutable | | 
+| N Queens All Valid Layouts Print | |
+| Rotate Image | | 

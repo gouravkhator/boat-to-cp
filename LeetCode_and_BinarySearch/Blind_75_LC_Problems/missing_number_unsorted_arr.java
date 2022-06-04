@@ -1,9 +1,10 @@
-class MissingNumber {
+class MissingNumber1stApproach {
     // Problem Question: https://leetcode.com/problems/missing-number/
     public int missingNumber(int[] nums) {
         /*
         Approach:
-        
+        ----------
+
         Given an unsorted array with elements ranging from [0, n] where n is the length of the array.
         We have to find the missing number in the array, and there will be exactly one missing number for sure,
         as the array has elements from range [0, n].
@@ -69,5 +70,33 @@ class MissingNumber {
         }
 
         return len;
+    }
+}
+
+class MissingNumber2ndApproach{
+     // Problem Question: https://leetcode.com/problems/missing-number/
+     public int missingNumber(int[] nums) {
+        /*
+        Approach:
+        ----------
+        
+        This approach was taken from leetcode discuss section, 
+        and it has the same Time complexity as the 1st approach, given by me.
+
+        As the array is unsorted, and it has elements from [0, n], and only one element is missing here.
+        n is the length of the array.
+
+        So, it means that the missing number will obviously be (sum of numbers from [0..n] - sum of numbers of the array).
+        */
+        
+        int totalSum = 0, actualSum = 0, len = nums.length;
+
+        for(int i=0; i<len; i++){
+            actualSum += nums[i];
+        }
+
+        totalSum = len * (len + 1) / 2; // sum of numbers from [0..n], meaning sum of first n natural numbers.
+
+        return totalSum - actualSum;
     }
 }
