@@ -4,6 +4,11 @@
 
 > This approach uses BFS methodology.
 
+A slightly different approach is using bellman ford algo with bfs combined.
+Approach is here: [Bellman-Ford - Cheapest Flights within K Stops - Leetcode 787 - Python](https://youtu.be/5eIK3zUdYmE)
+
+But I could not even understand this approach.
+
 ```java
 class CheapestFlightsKStops {
   /*
