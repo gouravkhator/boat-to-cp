@@ -9,6 +9,7 @@
 * [Guess Number Higher or Lower II](https://leetcode.com/problems/guess-number-higher-or-lower-ii/)
 * [Filling BookCase Shelves](https://leetcode.com/problems/filling-bookcase-shelves/)
 * [Jump Game IV](https://leetcode.com/problems/jump-game-iv/)
+* [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
 
 ## BinarySearch
 

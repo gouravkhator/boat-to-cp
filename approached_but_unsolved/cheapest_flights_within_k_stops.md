@@ -1,3 +1,10 @@
+# [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+
+## Code | TLE with only 28/51 test cases passed
+
+> This approach uses BFS methodology.
+
+```java
 class CheapestFlightsKStops {
   /*
   We get TLE on the last test case given here. On leetcode, this code passed 28/51 test cases.
@@ -82,3 +89,4 @@ class CheapestFlightsKStops {
     return (resDist == Integer.MAX_VALUE) ? -1 : resDist;
   }
 }
+```
