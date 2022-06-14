@@ -8,3 +8,4 @@
 | [Letter Tile Possibilities](https://github.com/gouravkhator/boat-to-cp/blob/main/LeetCode_and_BinarySearch/letter_tile_possibilities.java) | | Time complexity drastically
 | [Lowest Common Ancestor of Binary Tree]() | | Time complexity from current approach's 879 ms runtime (faster than just 5% in leetcode) to around 1 - 5 ms runtime
 | [Sum of all Odd length subarrays]() | | Time complexity from current approach's O(n^2) to O(n)
+| [Longest Valid Parentheses]() | | Time complexity from current O(n^2) to O(n)

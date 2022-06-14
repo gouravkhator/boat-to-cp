@@ -25,6 +25,7 @@ I will also hyperlink the solutions in the below table itself, once I commit and
 | Partition to K equal Sum Subsets | 
 | Flatten Binary Tree to Linked List | |
 | Kth Largest Element in an Array | |
+| Longest Valid Parentheses | | 
 | Validate BST | |
 | Trie Implementation | | 
 | Subsets With Duplicates I/II | |
@@ -35,3 +36,4 @@ I will also hyperlink the solutions in the below table itself, once I commit and
 | Range Sum Query 2-D Immutable | | 
 | N Queens All Valid Layouts Print | |
 | Rotate Image | | 
+| Triangle Min Path Sum | | 
