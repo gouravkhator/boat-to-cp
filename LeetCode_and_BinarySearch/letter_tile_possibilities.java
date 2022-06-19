@@ -1,3 +1,5 @@
+import java.util.*;
+
 class LetterTilePossibilities {  
   public void possibilitiesRecur(String tiles, int index, String prevStr, Set<Integer> visitedIndices, Set<String> possibilities){
     /*

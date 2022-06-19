@@ -1,3 +1,5 @@
+import java.util.*;
+
 class MaximumErasureValue {
   // Problem Question: https://leetcode.com/problems/maximum-erasure-value/
   public int maximumUniqueSubarray(int[] nums) {

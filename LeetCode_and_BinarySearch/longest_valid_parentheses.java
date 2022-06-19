@@ -1,3 +1,5 @@
+import java.util.*;
+
 class LongestValidParentheses {
   // Problem Question: https://leetcode.com/problems/longest-valid-parentheses/
   public int longestValidParentheses(String s) {

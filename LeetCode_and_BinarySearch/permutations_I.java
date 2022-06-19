@@ -1,3 +1,5 @@
+import java.util.*;
+
 class PermutationsI {
   public void recur(int[] nums, List<Integer> visited, List<List<Integer>> res){
       // Approach is similar to combinations sum problem, or to permutations II problem.

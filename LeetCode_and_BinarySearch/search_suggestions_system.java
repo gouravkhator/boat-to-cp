@@ -1,3 +1,5 @@
+import java.util.*;
+
 class SearchSuggestionsSystem {
   public void evalTheWordsPrefixedWith(Trie.TrieNode node){
     node.wordsPrefixedWith = new ArrayList<>();

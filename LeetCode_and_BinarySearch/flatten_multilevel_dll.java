@@ -1,3 +1,5 @@
+import java.util.*;
+
 class FlattenMultilevelDLL {
   class Node {
     public int val;

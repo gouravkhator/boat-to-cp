@@ -1,3 +1,5 @@
+import java.util.*;
+
 class RemoveStonesMinimizeTotal {
   // Problem Question: https://leetcode.com/problems/remove-stones-to-minimize-the-total/
   public int minStoneSum(int[] piles, int k) {

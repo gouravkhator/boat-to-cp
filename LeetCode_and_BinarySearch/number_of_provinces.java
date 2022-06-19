@@ -1,3 +1,5 @@
+import java.util.*;
+
 class NumberOfProvinces {
   // performs BFS from a particular src..
   public void bfs(int[][] isConnected, boolean[] visitedArr, int src) {

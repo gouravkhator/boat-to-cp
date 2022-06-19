@@ -1,3 +1,5 @@
+import java.util.*;
+
 class MakeTwoArrEqualByReversingSubarr {
   // Problem Question: https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/
   public boolean canBeEqual(int[] target, int[] arr) {

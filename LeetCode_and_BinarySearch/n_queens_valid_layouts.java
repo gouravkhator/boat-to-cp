@@ -1,3 +1,5 @@
+import java.util.*;
+
 class NQueensValidLayouts {
   public boolean isSafe(List<String> prevRowsLayout, int row, int col, int n){
     // check vertically up, before this current row

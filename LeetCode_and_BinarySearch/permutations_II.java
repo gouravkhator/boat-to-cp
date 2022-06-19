@@ -1,3 +1,5 @@
+import java.util.*;
+
 class PermutationsII {
   public void permutationRecur(int[] nums, List<Integer> visitedIndices, Set<List<Integer>> result){
     /*

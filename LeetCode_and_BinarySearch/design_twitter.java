@@ -1,3 +1,5 @@
+import java.util.*;
+
 // Problem Question: https://leetcode.com/problems/design-twitter/
 class Twitter {
   /*

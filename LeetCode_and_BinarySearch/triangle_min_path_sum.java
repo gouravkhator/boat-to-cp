@@ -1,3 +1,5 @@
+import java.util.*;
+
 class TriangleMinPathSum {
   // Problem Question: https://leetcode.com/problems/triangle/
   public int minimumTotal(List<List<Integer>> triangle) {

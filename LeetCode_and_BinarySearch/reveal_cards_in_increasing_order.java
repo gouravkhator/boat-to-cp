@@ -1,3 +1,5 @@
+import java.util.*;
+
 class RevealCardsInIncreasingOrder {
   // Problem Question: https://leetcode.com/problems/reveal-cards-in-increasing-order/
   public int[] deckRevealedIncreasing(int[] deck) {

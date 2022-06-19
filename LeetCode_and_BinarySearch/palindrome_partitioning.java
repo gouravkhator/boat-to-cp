@@ -1,3 +1,5 @@
+import java.util.*;
+
 class PalindromePartitioning {
   // Problem Question: https://leetcode.com/problems/palindrome-partitioning/
   public boolean isPalindrome(String s){
