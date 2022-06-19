@@ -16,7 +16,6 @@
 * [Hill Maker](https://binarysearch.com/problems/Hill-Maker)
 * [Cut Palindrome](https://binarysearch.com/problems/Cut-Palindrome)
 * [Swapping Socks](https://binarysearch.com/problems/Swapping-Socks)
-* [Angry Owner](https://binarysearch.com/problems/Angry-Owner)
 * [Crush Numbers](https://binarysearch.com/problems/Crush-Numbers)
 * [Cluster Management](https://binarysearch.com/problems/Cluster-Management)
 * [Quadratic Application](https://binarysearch.com/problems/Quadratic-Application)

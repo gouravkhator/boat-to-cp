@@ -39,4 +39,5 @@ I will also hyperlink the solutions in the below table itself, once I commit and
 | Triangle Min Path Sum | | 
 | Decode Ways | | 
 | Binary Tree Maximum Path Sum | | 
+| Angry Owner | | 
 
