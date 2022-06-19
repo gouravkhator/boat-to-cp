@@ -37,3 +37,6 @@ I will also hyperlink the solutions in the below table itself, once I commit and
 | N Queens All Valid Layouts Print | |
 | Rotate Image | | 
 | Triangle Min Path Sum | | 
+| Decode Ways | | 
+| Binary Tree Maximum Path Sum | | 
+
