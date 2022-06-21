@@ -40,4 +40,5 @@ I will also hyperlink the solutions in the below table itself, once I commit and
 | Decode Ways | | 
 | Binary Tree Maximum Path Sum | | 
 | Angry Owner | | 
+| Furthest Building you can reach | | 
 
