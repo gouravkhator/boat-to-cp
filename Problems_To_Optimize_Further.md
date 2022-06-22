@@ -9,3 +9,4 @@
 | [Lowest Common Ancestor of Binary Tree]() | | Time complexity from current approach's 879 ms runtime (faster than just 5% in leetcode) to around 1 - 5 ms runtime
 | [Sum of all Odd length subarrays]() | | Time complexity from current approach's O(n^2) to O(n)
 | [Longest Valid Parentheses]() | | Time complexity from current O(n^2) to O(n)
+| [Find Triangular Sum of the Array]() | | Optimize the time complexity with a different approach
