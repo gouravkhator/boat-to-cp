@@ -9,6 +9,7 @@ The Competitive Programming questions link with solved Java/Python solutions are
     The whole Systems Design will be in **.md** file with proper formatting and so much fun.
 
 * Approached CP Problems but not yet solved - It includes approach and code in the form of **.md** files for each question.
+* **Leetcode DSA Sheet Topic-Wise PDF**, all credits to Fraz Bhaiya, to crack FAANG Interviews, mainly Google. PDF shared in the root folder of this repo.
 
 ## CP Platforms Covered
 
