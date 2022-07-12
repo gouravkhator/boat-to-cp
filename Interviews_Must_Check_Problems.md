@@ -42,3 +42,4 @@ I will also hyperlink the solutions in the below table itself, once I commit and
 | Angry Owner | | 
 | Furthest Building you can reach | | 
 | Interleaving String | | 
+| Matchsticks To Square | | 
