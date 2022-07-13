@@ -43,3 +43,37 @@ I will also hyperlink the solutions in the below table itself, once I commit and
 | Furthest Building you can reach | | 
 | Interleaving String | | 
 | Matchsticks To Square | | 
+
+## Other Problem Sums that I might not have solved in this repo, but feel important for coding interviews
+
+- [Cutting a rod](https://www.geeksforgeeks.org/java-program-for-cutting-a-rod-dp-13/)
+
+- [Sort Colors](https://leetcode.com/problems/sort-colors/) or [Sort an array of 0s, 1s and 2s](https://geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/)
+
+- [Find Common elements in 3 sorted arrays](https://www.geeksforgeeks.org/find-common-elements-three-sorted-arrays/)
+
+  - My approach says that take 3 pointers to each of the array start. And check at each time, if all 3 pointers' elements are same then print that element and increment all 3 index by 1.
+  - If they are not same, we increment the index of that array by 1 to point to next element in that array. This is done till we reach end of any one of the arrays.
+
+- [Sort elements by frequency | GFG Question Set 2](https://geeksforgeeks.org/sort-elements-by-frequency-set-2/)
+
+- [Sum of k largest elements in BST](http://geeksforgeeks.org/sum-of-k-largest-elements-in-bst/)
+
+- [Check if a queue can be sorted into another queue using a stack](https://www.geeksforgeeks.org/check-queue-can-sorted-another-queue-using-stack/)
+
+- [Print middle level of perfect binary tree without finding height](https://www.geeksforgeeks.org/print-middle-level-perfect-binary-tree-without-finding-height/)
+
+- [Heap sort Convert Min Heap to Max Heap](https://www.geeksforgeeks.org/convert-min-heap-to-max-heap/)
+
+- [Huffman Coding Problem (Greedy Algorithm)](https://www.geeksforgeeks.org/greedy-algorithms-set-3-huffman-coding/)
+
+- [Find pair in sorted array whose sum is closest to a number x](https://www.geeksforgeeks.org/given-sorted-array-number-x-find-pair-array-whose-sum-closest-x/)
+
+- [Find closest pair from 2 sorted arrays](https://www.geeksforgeeks.org/given-two-sorted-arrays-number-x-find-pair-whose-sum-closest-x/)
+
+- [Watch `""The Decryption Problem" on Google Codejam 2019"` on YouTube](https://youtu.be/ne8vB6FAzl0)
+
+- [GCD of two numbers when one of them can be very large](https://geeksforgeeks.org/gcd-of-two-numbers-when-one-of-them-can-be-very-large-2/)
+
+- [Execute if and else block simultaneously](https://www.geeksforgeeks.org/execute-else-statements-cc-simultaneously)
+
