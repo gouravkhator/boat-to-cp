@@ -18,6 +18,7 @@ I will also hyperlink the solutions in the below table itself, once I commit and
 | Search Element in Rotated Sorted Array | Binary Search | Linear Search
 | Combination Sum | Recursion with somewhat optimised approach | No non-optimal approach thought | This problem sum helped in understanding how to do recursion in a optimised way, for inclusion and exclusion problem sums
 | Merge K sorted Lists | Merge sort like approach on K Lists | Any sort on the merged list of K lists (takes up extra space of O(n*k))
+| Travelling Salesman Problem (TSP) | | 
 | Number of Islands | DFS | No non-optimal approach thought
 | Missing Number in Unsorted Array | Uses the same array for manipulating the element by the index | Uses extra boolean array and then fills them with true if it exists, or false if it is not, and then lookup that array 
 | Climbing Stairs | Fibonacci Series (Normal Loop) | Linear DP
