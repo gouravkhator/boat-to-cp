@@ -1,5 +1,7 @@
 # Boat To CP
 
+[![Apache](https://img.shields.io/badge/license-Apache-blue.svg)](https://github.com/gouravkhator/boat-to-cp/blob/main/LICENSE.md)
+
 The Competitive Programming questions link with solved Java/Python solutions are written in this one single repository.
 
 **\*NEW\* stuffs in this repo:**
@@ -27,6 +29,6 @@ It also includes **Google Kickstart** problem sums, either solved fully by me, o
 
 Not all CP questions are uploaded here. I got some of the major platforms here, on which I code and keep a local copy of my solutions.
 
-**Note: All the solutions are written in Java/Python.**
+**Note: All the solutions are written in Java/Python.** I may add some code solutions in Rust in future.
 
 Some solutions were solved for some exams which I couldn't share.
