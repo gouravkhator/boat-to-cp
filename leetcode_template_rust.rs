@@ -1,10 +1,10 @@
 /**
  * ----Analogy-----:
- * 
+ *
  * ----Approach----:
- * 
+ *
  * ----Time Complexity & Space Complexity-------:
- * 
+ *
  */
 pub struct Solution {}
 
@@ -12,12 +12,12 @@ pub struct Solution {}
 
 // -----submission codes start here-----
 
-// -----submission codes end-----
+// -----submission codes end here-----
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
-    fn test_problem_title_() {}
+    fn test_problem() {}
 }
