@@ -44,6 +44,7 @@ I will also hyperlink the solutions in the below table itself, once I commit and
 | Furthest Building you can reach | | 
 | Interleaving String | | 
 | Matchsticks To Square | | 
+| Out of Boundary Paths | |
 
 ## Other Problem Sums that I might not have solved in this repo, but feel important for coding interviews
 

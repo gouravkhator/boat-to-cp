@@ -27,13 +27,14 @@
  * so removing either of them will help in making the array strictly increasing.
  *
  * If we remove element at `index`, then to check the strictly increasing property,
- * elements at (index-1), (index+1) and (index+2) should be following that property.
+ * elements at (index-1) and (index+1) should be following that property.
  *
  * If we remove element at `index + 1`, then to check the strictly increasing property,
- * elements at (index-1), (index) and (index+2) should be following that property.
+ * elements at (index) and (index+2) should be following that property.
  *
- * We check 1 element before current `index` and 1 element after (index+1), to check the strictly increasing property.
- * It is bcoz, we might remove either `index` or `index+1` element, as either of them might have caused the array to be non-increasing.
+ * We don't need to check other parts of the array,
+ * so if I remove element at `index`, then I just need to check,
+ * if the just previous element and just next element follow the strictly increasing rule.
  *
  * ----Time Complexity & Space Complexity-------:
  *
@@ -82,11 +83,19 @@ impl Solution {
             }
 
             // other non-edge cases
-            if nums[index - 1] < nums[index + 1] && nums[index + 1] < nums[index + 2] {
-                // we can have nums[index] removed in this case
+            if nums[index - 1] < nums[index + 1] {
+                /*
+                if we wanted to remove nums[index],
+                then we check if its just prev and just next elements
+                are following that strictly increasing rule
+                */
                 return true;
-            } else if nums[index - 1] < nums[index] && nums[index] < nums[index + 2] {
-                // we can have nums[index + 1] removed in this case
+            } else if nums[index] < nums[index + 2] {
+                /*
+                if we wanted to remove nums[index+1],
+                then we check if its just prev and just next elements
+                are following that strictly increasing rule
+                */
                 return true;
             }
         }
