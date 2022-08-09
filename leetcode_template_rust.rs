@@ -1,14 +1,30 @@
 /**
+ * Problem Question: __PROBLEM_LINK__
+ *
  * ----Analogy-----:
  *
  * ----Approach----:
  *
+ * Steps:
+ * --------
+ * 1.
+ * 2.
+ *
+ * Example if applicable:
+ * ---------------------
+ *
  * ----Time Complexity & Space Complexity-------:
+ *
+ * Time Complexity: O(_)
+ * Space Complexity: O(_)
+ *
+ * Explanation of the above complexities if applicable:
+ * --------------------------------------------------------
+ * - For the Time Complexity,
+ * - For the Space Complexity,
  *
  */
 pub struct Solution {}
-
-// Problem Question: __PROBLEM_LINK__
 
 // -----submission codes start here-----
 
