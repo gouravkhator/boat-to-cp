@@ -32,6 +32,7 @@ I will also hyperlink the solutions in the below table itself, once I commit and
 | Subsets With Duplicates I/II | |
 | Spiral Matrix | |
 | Next permutation | |
+| Different Ways to Add Parentheses | | 
 | Find Kth Bit in Nth Binary String | |
 | Permutations I & II | |
 | Range Sum Query 2-D Immutable | | 
