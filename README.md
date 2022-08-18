@@ -1,6 +1,10 @@
 # Boat To CP ⛵
 
-[![Apache](https://img.shields.io/badge/license-Apache-blue.svg)](https://github.com/gouravkhator/boat-to-cp/blob/main/LICENSE.md)
+[![Java](https://img.shields.io/badge/-Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/en/)
+[![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Rust](https://img.shields.io/badge/rust-white.svg?style=for-the-badge&logo=rust&logoColor=whitesmoke&color=chocolate)](https://www.rust-lang.org/)
+
+[![Apache](https://img.shields.io/badge/license-Apache-white.svg?style=for-the-badge&color=%239c833e)](https://github.com/gouravkhator/boat-to-cp/blob/main/LICENSE.md)
 
 The Competitive Programming questions link with solved Java/Python solutions are written in this one single repository.
 
@@ -29,6 +33,6 @@ The Competitive Programming questions link with solved Java/Python solutions are
 
 Not all CP questions are uploaded here. I got some of the major platforms here, on which I code and keep a local copy of my solutions.
 
-**Note: All the solutions are written in Java/Python/Rust.** I am trying out newer problems in Rust now.
+**Note: All the solutions are written in Java/Python/Rust.**
 
 Some solutions were solved for some exams which I couldn't share.
