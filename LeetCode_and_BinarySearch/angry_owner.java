@@ -1,10 +1,10 @@
-import java.util.*;
-
 class AngryOwner {
+
   // Problem Question: https://binarysearch.com/problems/Angry-Owner
   public int solve(int[] customers, int[] mood, int k) {
-      /*
-      Test cases:
+    /*      
+Test cases:
+
 #1:
 customers = [1, 2, 5, 5, 2]
 mood = [1, 1, 0, 0, 0]
@@ -31,9 +31,9 @@ k = 1
 customers = [2,0,1]
 mood = [0,1,0]
 k = 3
-      */
+    */
 
-      /*
+    /*
       Analogy:
       ------------
 
@@ -82,48 +82,48 @@ k = 3
       SC: O(1)
       */
 
-      int len = customers.length;
-      int count = 0, start = -1, sum=0, maxSum = 0;
+    int len = customers.length;
+    int count = 0, start = -1, sum = 0, maxSum = 0;
 
-      for(int i=0; i<len; i++){
-        count++;
+    for (int i = 0; i < len; i++) {
+      count++;
 
-        if(start == -1){
-          start = i;
-        }
+      if (start == -1) {
+        start = i;
+      }
 
-        if(mood[i] == 0){
-          // if the mood is currently 0
+      if (mood[i] == 0) {
+        // if the mood is currently 0
 
-          if(k > 0){
-            // if k is 0, we should not consider this customers[i] in the sum, as we are making length of k.
-            sum += customers[i];
-          }
-        }
-
-        if(count == k){
-          maxSum = Math.max(maxSum, sum);
-          sum -= (mood[start] == 1 ? 0: customers[start]);
-          count--;
-          start++;
+        if (k > 0) {
+          // if k is 0, we should not consider this customers[i] in the sum, as we are making length of k.
+          sum += customers[i];
         }
       }
 
-      if(count > 0 && count < k){
-        /*
+      if (count == k) {
+        maxSum = Math.max(maxSum, sum);
+        sum -= (mood[start] == 1 ? 0 : customers[start]);
+        count--;
+        start++;
+      }
+    }
+
+    if (count > 0 && count < k) {
+      /*
         we should have atmost k length sublist, so that is why, 
         we are considering this edge case too where the count is less than k, but greater than 0
         */
-        maxSum = Math.max(maxSum, sum); 
-      }
-
-      for(int i=0; i<len; i++){
-        // summing up the customers with mood as 1
-        if(mood[i] == 1){
-            maxSum += customers[i];
-        }
-      }
-
-      return maxSum;
+      maxSum = Math.max(maxSum, sum);
     }
+
+    for (int i = 0; i < len; i++) {
+      // summing up the customers with mood as 1
+      if (mood[i] == 1) {
+        maxSum += customers[i];
+      }
+    }
+
+    return maxSum;
+  }
 }

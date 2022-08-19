@@ -1,2 +1,8 @@
-*.class
+# Temp files if created should be ignored in git
 temp_*.**
+
+# Java gitignores
+*.class
+
+# Rust project gitignores
+/target

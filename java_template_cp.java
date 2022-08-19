@@ -1,7 +1,7 @@
 import java.io.*;
-import java.util.StringTokenizer;
+import java.util.*;
 
-class CP_Template {
+class JavaTemplateForCP {
 
   static class FastReader {
 
@@ -50,7 +50,11 @@ class CP_Template {
     }
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
     FastReader in = new FastReader();
+
+    // take user inputs here
+
+    in.br.close(); // closing the input stream
   }
 }
