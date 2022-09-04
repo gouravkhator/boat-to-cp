@@ -46,6 +46,7 @@ I will also hyperlink the solutions in the below table itself, once I commit and
 | Interleaving String | | 
 | Matchsticks To Square | | 
 | Out of Boundary Paths | |
+| Count pairs divisible by K | |
 
 ## Other Problem Sums that I might not have solved in this repo, but feel important for coding interviews
 
@@ -80,3 +81,19 @@ I will also hyperlink the solutions in the below table itself, once I commit and
 
 - [Execute if and else block simultaneously](https://www.geeksforgeeks.org/execute-else-statements-cc-simultaneously)
 
+- [Check Balanced Parentheses expression in O(1) space](https://www.geeksforgeeks.org/check-balanced-parentheses-expression-o1-space/)
+
+- [Maximum number formed from array with k number of adjacent swaps allowed](https://www.geeksforgeeks.org/maximum-number-formed-from-array-with-k-number-of-adjacent-swaps-allowed/)
+
+- Given an integer array, find the most frequent number and its count in the array. Write the code in O(1) space. 
+  - Approach: If they allow for extra time, then sort the array and find out the counts by traversing the array once. And while traversing, update the max freq.
+
+- Merge two unsorted array into a single sorted array. No extra space are allowed.
+  - We can do insertion sort over two arrays at once. Meaning insert each number in the correct place in the array, but assume that the array is broken into two arrays.
+
+- [Merge sort for linked list](https://www.geeksforgeeks.org/merge-sort-for-linked-list/)
+
+- [Count subsequences which contains both the maximum and minimum array element](https://www.geeksforgeeks.org/count-subsequences-which-contains-both-the-maximum-and-minimum-array-element/)
+
+- [Connect nodes at same level](https://www.geeksforgeeks.org/connect-nodes-at-same-level/)
+  - Approach: Connect left child to right child or to parent's next right's children, and then connect right child also similarly, then recur for left and right child.
